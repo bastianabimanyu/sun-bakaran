@@ -1,0 +1,851 @@
+html{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    background-image: url('gambar/banne.jpeg');
+    background-size: cover;
+    height: 100vh;
+    background-position: center;
+}
+
+main{
+    overflow: hidden;
+}
+
+/* start navbar */
+
+nav {
+    height: 70px;
+    background-color: orange;
+    display: flex;
+    align-items: center; /* Menyusun elemen secara vertikal di tengah */
+    justify-content: space-between; /* Menjaga jarak antar elemen */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    opacity: 0.9;
+    padding: 0 20px; /* Memberikan padding di kiri dan kanan */
+}
+
+nav img {
+    width: 100px;
+    height: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center; /* Menyusun item secara vertikal di tengah */
+    padding: 0;
+    margin: 0;
+    gap: 50px; /* Jarak antar item menu */
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    transition: background-color 0.3s, color 0.3s; /* Efek transisi untuk hover */
+}
+
+/* Hover effect untuk link */
+nav ul li a:hover {
+    background-color: orangered;
+    color: black;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+/* Pastikan tombol login tetap terlihat dan berada di posisi yang tepat */
+nav ul li.login-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: orangered;
+    border-radius: 4px;
+}
+
+nav ul li.login-btn a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+}
+@media (min-width:300px) and (max-width: 650px) {
+    nav {
+        padding: 0 10px; /* Mengurangi padding di sekitar nav saat ukuran kecil */
+    }
+
+    nav ul {
+        display: none; /* Menyembunyikan menu navigasi */
+        flex-direction: column;
+        width: 200%;
+        position: absolute;
+        top: 70px; /* Menempatkan menu di bawah navbar */
+        left: 50%;
+        transform: translateX(-50%); /* Menyelaraskan menu ke tengah */
+        background-color: orange;
+        padding: 0;
+        gap: 15px;
+        z-index: 101;
+        border-top: 2px solid white; /* Garis pemisah dengan navbar */
+        overflow: hidden;
+    }
+
+    nav ul li {
+        width: 100%; /* Membuat link menu mengisi seluruh lebar */
+        text-align: center;
+        border-bottom: 1px solid white; /* Menambahkan garis bawah antar menu */
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 15px 0;
+        text-align: center;
+    }
+
+    nav #hamburger-menu {
+        display: block; /* Menampilkan tombol hamburger */
+        cursor: pointer;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        z-index: 102;
+    }
+
+    nav #hamburger-menu span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: white;
+        margin: 5px 0;
+    }
+
+    /* Tombol login di bawah menu hamburger */
+    nav ul li:last-child {
+        border-bottom: none; /* Menghapus garis bawah pada item terakhir (tombol login) */
+    }
+
+    nav ul li.login-btn {
+        width: 100%;
+        text-align: center;
+        background-color: orangered;
+        color: white;
+        border-top: 1px solid white;
+        margin-top: 10px;
+    }
+
+    nav ul li.login-btn a {
+        display: block;
+        padding: 15px;
+        text-decoration: none;
+        color: white;
+    }
+
+    nav ul.show {
+        display: flex; /* Menampilkan menu saat hamburger diklik */
+    }
+
+    nav > ul > li {
+        text-align: center;
+        width: 100%;
+    }
+    
+    nav > ul > li > a {
+        padding: 15px;
+    }
+    
+    /* Transition animasi untuk efek hamburger */
+    nav > ul {
+        transition: all 0.3s ease-in-out;
+}
+}
+
+@media (min-width:650px) and (max-width: 700px) {
+    nav ul {
+        list-style: none;
+        display: flex;
+        align-items: center; /* Menyusun item secara vertikal di tengah */
+        padding: 0;
+        margin: 0;
+        gap: 10px; /* Jarak antar item menu */
+    }
+}
+
+/* end navbar */
+
+
+/* start section pertama */
+
+.judulhome{
+    padding-top: 150px;
+    text-align: center;
+    color: white;
+    font-size: 3.5rem;
+}
+
+header>p{
+    text-align: center;
+    margin-left: auto;  /* Menyusun margin kiri otomatis */
+    margin-right: auto; /* Menyusun margin kanan otomatis */
+    width: 50%;
+    color: white;
+    font-size: 17px;
+}
+
+.button-sectionhome{
+    display: flex;
+    justify-content: center;
+}
+
+a>button{
+    border-style: none;
+    width: 150px;
+    height: 50px;
+    border-radius: 9px;
+    background-color: orange;
+    text-decoration: none;
+}
+
+@media (min-width:300px) and (max-width: 650px) {
+     /* Mengurangi padding dan margin lebih jauh untuk layar kecil */
+     .judulhome{
+        text-align:center;
+        margin-left: 0;
+        font-size: 2rem;
+    }
+
+    header > p {
+        text-align: center; /* Center align paragraph */
+        max-width: 100%;
+        font-size: 14px;
+        margin-top: 1.5rem;
+    }
+
+    .button-sectionhome{
+        display: flex;
+        justify-content: center;
+    }
+
+    .button-sectionhome> a > button {
+        display: block;
+        margin: 20px auto; /* Center the button */
+        width: 150px; /* Button width slightly reduced */
+        height: 45px; /* Slightly reduced button height */
+        text-decoration: none;
+    }
+}
+
+
+/* end section pertama*/
+
+
+
+/* start section kedua */
+#buah{
+    background-color: moccasin;
+    height: 200vh;
+    gap: 30px;
+}
+
+#buah>.judul{
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.carddaftar1 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Agar card bisa berpindah baris di layar kecil */
+    gap: 1.3rem;
+}
+
+.carddaftar2{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Agar card bisa berpindah baris di layar kecil */
+    gap: 1.3rem;
+}
+
+.satu{
+  box-shadow: 5px 5px 10px yellow;
+  background-color: coral;
+}
+
+.satu:hover{
+    transition-duration: 1s;
+    transform: scale(0.9);
+}
+
+.satu>img{
+    width: 100%;
+    height: 13rem;
+}
+
+.buy{
+    display: flex;
+    gap: 4rem;
+}
+
+.buy>p{
+    color: white;
+}
+
+.kedua{
+  box-shadow: 5px 5px 10px purple;
+  background-color: coral;
+}
+
+.kedua:hover{
+    transition-duration: 1s;
+    transform: scale(0.9);
+}
+
+.kedua>img{
+    width: 100%;
+    height: 13rem;
+}
+
+.ketiga{
+    box-shadow: 5px 5px 10px green;
+    background-color: coral;
+}
+
+.ketiga:hover{
+    transition-duration: 1s;
+    transform: scale(0.9);
+}
+
+.ketiga>img{
+    width: 100%;
+    height: 13rem;
+}
+
+.keempat{
+    box-shadow: 5px 5px 10px orange;
+    background-color: coral;
+}
+
+
+.keempat>img{
+    width: 100%;
+    height: 13rem;
+}
+
+.keempat:hover{
+    transition-duration: 1s;
+    transform: scale(0.9);
+}
+
+.kelima{
+    box-shadow: 5px 5px 10px red;
+    background-color: coral;
+}
+
+.kelima:hover{
+    transition-duration: 1s;
+    transform: scale(0.9);
+}
+
+.kelima>img{
+    width: 100%;
+    height: 13rem;
+}
+
+.keenam{
+    box-shadow: 5px 5px 10px yellowgreen;
+    background-color: coral;
+}
+
+.keenam:hover{
+    transition-duration: 1s;
+    transform: scale(0.9);
+}
+
+.keenam>img{
+    width: 100%;
+    height: 13rem;
+}
+
+.ketujuh{
+    box-shadow: 5px 5px 10px orangered;
+    background-color: coral;
+}
+
+.ketujuh:hover{
+    transition-duration: 1s;
+    transform: scale(0.9);
+}
+
+.ketujuh>img{
+    width: 100%;
+    height: 13rem;
+}
+
+.kedelapan{
+    box-shadow: 5px 5px 10px brown;
+    background-color: coral;
+}
+
+.kedelapan:hover{
+    transition-duration: 1s;
+    transform: scale(0.9);
+}
+
+.kedelapan>img{
+    width: 100%;
+    height: 13rem;
+}
+
+.carddaftar1 .satu, 
+.carddaftar1 .kedua, 
+.carddaftar1 .ketiga, 
+.carddaftar1 .keempat, 
+.carddaftar1 .kelima, 
+.carddaftar1 .keenam, 
+.carddaftar1 .ketujuh, 
+.carddaftar1 .kedelapan {
+    flex-basis: 23%; /* Mengatur card untuk tampil berdampingan di layar besar */
+    box-sizing: border-box;
+}
+
+.carddaftar2 .satu, 
+.carddaftar2 .kedua, 
+.carddaftar2 .ketiga, 
+.carddaftar2 .keempat, 
+.carddaftar2 .kelima, 
+.carddaftar2 .keenam, 
+.carddaftar2 .ketujuh, 
+.carddaftar2 .kedelapan {
+    flex-basis: 23%; /* Mengatur card untuk tampil berdampingan di layar besar */
+    box-sizing: border-box;
+}
+
+@media (min-width:300px) and (max-width: 1029.33px) {
+    #buah{
+        background-color: moccasin;
+        height: 200vh;
+        gap: 30px;
+    }
+    
+    #buah>.judul{
+        text-align: center;
+        padding-top: 2rem;
+    }
+
+    .carddaftar11{
+        overflow-x: scroll;
+        width: 100%;
+        scrollbar-color: transparent transparent;
+    }
+
+    .carddaftar11::-webkit-scrollbar{
+        display: none;
+    }
+    
+    .carddaftar1{
+        display: flex;
+        width: max-content;
+    }
+
+    .carddaftar22{
+        overflow-x: scroll;
+        width: 100%;
+        scrollbar-color: transparent transparent;
+    }
+
+    .carddaftar22::-webkit-scrollbar{
+        display: none;
+    }
+    
+    .carddaftar2{
+        display: flex;
+        width: max-content;
+    }
+
+    .satu{
+      box-shadow: 5px 5px 10px yellow;
+      background-color: coral;
+    }
+    
+    .satu:hover{
+        transition-duration: 1s;
+        transform: scale(0.9);
+    }
+    
+    .satu>img{
+        width: 100%;
+        height: 13rem;
+    }
+    
+    .buy{
+        display: flex;
+        gap: 4rem;
+    }
+    
+    .buy>p{
+        color: white;
+    }
+    
+    .kedua{
+      box-shadow: 5px 5px 10px purple;
+      background-color: coral;
+    }
+    
+    .kedua:hover{
+        transition-duration: 1s;
+        transform: scale(0.9);
+    }
+    
+    .kedua>img{
+        width: 100%;
+        height: 13rem;
+    }
+    
+    .ketiga{
+        box-shadow: 5px 5px 10px green;
+        background-color: coral;
+    }
+    
+    .ketiga:hover{
+        transition-duration: 1s;
+        transform: scale(0.9);
+    }
+    
+    .ketiga>img{
+        width: 100%;
+        height: 13rem;
+    }
+    
+    .keempat{
+        box-shadow: 5px 5px 10px orange;
+        background-color: coral;
+    }
+    
+    
+    .keempat>img{
+        width: 100%;
+        height: 13rem;
+    }
+    
+    .keempat:hover{
+        transition-duration: 1s;
+        transform: scale(0.9);
+    }
+    
+    .kelima{
+        box-shadow: 5px 5px 10px red;
+        background-color: coral;
+    }
+    
+    .kelima:hover{
+        transition-duration: 1s;
+        transform: scale(0.9);
+    }
+    
+    .kelima>img{
+        width: 100%;
+        height: 13rem;
+    }
+    
+    .keenam{
+        box-shadow: 5px 5px 10px yellowgreen;
+        background-color: coral;
+    }
+    
+    .keenam:hover{
+        transition-duration: 1s;
+        transform: scale(0.9);
+    }
+    
+    .keenam>img{
+        width: 100%;
+        height: 13rem;
+    }
+    
+    .ketujuh{
+        box-shadow: 5px 5px 10px orangered;
+        background-color: coral;
+    }
+    
+    .ketujuh:hover{
+        transition-duration: 1s;
+        transform: scale(0.9);
+    }
+    
+    .ketujuh>img{
+        width: 100%;
+        height: 13rem;
+    }
+    
+    .kedelapan{
+        box-shadow: 5px 5px 10px brown;
+        background-color: coral;
+    }
+    
+    .kedelapan:hover{
+        transition-duration: 1s;
+        transform: scale(0.9);
+    }
+    
+    .kedelapan>img{
+        width: 100%;
+        height: 13rem;
+    }
+}
+/* end section kedua */
+
+
+
+
+/* start section ketiga */
+
+#testimoni{
+    background-color: lemonchiffon;
+    height: 120vh;
+    overflow: hidden;
+}
+
+#testimoni>h1{
+    text-align: center;
+}
+
+.testi{
+    margin-top: 4rem;
+    margin-left: 3px;
+    display: flex;
+    justify-content: center;
+    gap: 1.3rem;
+}
+
+.testi> .card{
+    width: 18rem;
+}
+
+.testi2> .card{
+    width: 18rem;
+}
+
+.star {
+    font-size: 25px;
+    color: gray;
+    cursor: pointer;
+  }
+
+  .star.clicked {
+    color: gold;
+  }
+
+.testi2{
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+@media (min-width:300px) and (max-width: 650px) {
+    #testimoni{
+        background-color: lemonchiffon;
+        height: 300vh;
+        overflow: hidden;
+    }
+    
+    #testimoni>h1{
+        text-align: center;
+    }
+    
+    .testi{
+        margin-top: 4rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .testi> .card{
+        width: 15rem;
+    }
+
+    .testi2{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .testi2> .card{
+        width: 15rem;
+    }
+
+    .cardterakhir{
+        margin-top: 2rem;
+    }
+    
+    .star {
+        font-size: 25px;
+        color: gray;
+        cursor: pointer;
+      }
+    
+      .star.clicked {
+        color: gold;
+      }
+    
+    .testi2{
+        margin-top: 3rem;
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+@media (min-width:651px) and (max-width: 1029.33px) {
+    #testimoni{
+        background-color: lemonchiffon;
+        height: 170vh;
+        overflow: hidden;
+    }
+}
+
+/* end section ketiga */
+
+
+/* start footer*/
+
+footer {
+    background-color: moccasin;
+    height: 60vh;
+}
+
+footer > ul {
+    padding-top: 3rem;
+}
+
+footer > ul > li {
+    list-style-type: none;
+}
+
+.foot {
+    display: flex;
+    justify-content: space-between; /* Menyebar elemen secara horizontal */
+    padding-top: 3rem;
+}
+
+.foot > .kt > ul {
+    list-style: none;
+}
+
+.foot > h5 {
+    margin-left: 16rem;
+}
+
+.foot > .sosmed {
+    list-style: none;
+    display: flex;
+    margin-right: 15rem;
+    flex-direction: column;
+    gap: 1rem; /* Menambah jarak antar ikon media sosial */
+}
+
+.foot > .sosmed > li {
+    display: flex;
+    align-items: center;
+}
+
+.foot > .sosmed > li > img {
+    width: 30px;
+    margin-top: 10px;
+}
+
+@media (min-width: 300px) and (max-width: 440px) {
+    footer {
+        background-color: moccasin;
+        height: auto;
+    }
+
+    footer > ul {
+        padding-top: 3rem;
+    }
+
+    footer > ul > li {
+        list-style-type: none;
+    }
+
+    .foot {
+        flex-direction: column;
+        padding-top: 3rem;
+        align-items: center; /* Menjaga elemen agar rata tengah */
+    }
+
+    .foot > .kt > ul {
+        list-style: none;
+    }
+
+    .foot > h5 {
+        margin-left: 0; /* Rata tengah di layar kecil */
+    }
+
+    .foot > .sosmed {
+        display: flex;
+        flex-direction: column;
+        margin-top: 2rem;
+        margin-left: 2rem;
+        justify-content: center; /* Menyusun ikon media sosial ke tengah */
+        gap: 1rem;
+    }
+
+    .foot > .sosmed > li > img {
+        width: 30px;
+        margin-top: 10px;
+    }
+}
+
+@media (min-width: 441px) and (max-width:800px) {
+    .foot > .sosmed {
+        list-style: none;
+        display: flex;
+        margin-right: 5rem;
+        flex-direction: column;
+        gap: 1rem; /* Menambah jarak antar ikon media sosial */
+    }
+}
+
+/* end footer */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* responsive di dalam hp */
